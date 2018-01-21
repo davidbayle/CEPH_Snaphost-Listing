@@ -1,0 +1,6 @@
+#!/bin/sh
+for pool in `rados lspools`;
+    do  echo "POOL :" $pool;
+        rbd ls -l $pool | grep '@';
+        echo "-----";
+    done
